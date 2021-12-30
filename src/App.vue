@@ -1,0 +1,41 @@
+<template>
+  <router-view />
+</template>
+
+<style lang="scss">
+@import "@/global-styles/colors.scss";
+@import "@/global-styles/typography.scss";
+//added parts
+h1 {
+  @include heading-1;
+}
+
+p {
+  @include large-text-bold($purple);
+}
+body {
+  background: $dark-blue;
+}
+// end of new added parts
+#app {
+  //font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: $system-font-family;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: $light-green;
+}
+
+#nav {
+  padding: 30px;
+
+  a {
+    font-weight: bold;
+    color: $light-green;
+
+    &.router-link-exact-active {
+      color: $white;
+    }
+  }
+}
+</style>
